@@ -2,7 +2,6 @@
 
 * {
     font-family: 'Press Start 2P', cursive;
-    margin: 0px;
     border-radius: 20px
 }
 
@@ -19,7 +18,7 @@ button {
 h1 {
     text-align: center;
     font-size: 40px;
-    margin-top: 29.5px;
+    margin-top: 35px;
 
 }
 
@@ -39,10 +38,7 @@ h1 {
     border: none;
 }
 
-
-
 hr {
-    margin: -20px;
     margin-top: 99px;
     background-color: #EEEEEE;
     height: 5px;
@@ -52,7 +48,6 @@ hr {
     margin: -4% auto;
     font-size: 60px;
     width: 120px;
-    height: 70px;
     text-align: center;
     align-items: center;
     padding: 20px 20px;
@@ -63,7 +58,7 @@ hr {
 .numes {
     font-size: 40px;
     color: #EEEEEE;
-    padding: 25px 10px 25px 55px;
+    padding: 15px 25px;
     background-color: #222222;
     border: 4px #EEEEEE dotted;
 }
@@ -74,11 +69,13 @@ hr {
 
 .chk {
     padding: 15px 20px;
+    margin: 18%;
 }
 
 .stn1 {
     display: flex;
-    margin: 500px;
+    width: 650px;
+    padding: 0 00px;
     margin: 0% auto;
 }
 
@@ -89,6 +86,11 @@ div {
     padding: 80px;
 }
 
-form {}
+form {
+    margin-top: 40px;
+    margin-left: -230px;
+}
 
-.stn2 {}
+.stn2 {
+    margin-left: 500px;
+}

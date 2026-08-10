@@ -10,24 +10,28 @@
 </head>
 
 <body>
-    <button class="btag">Again!</button>
-    <p class="btw">(Between 1 and 20)</p>
+    <section class="stn1">
+        <button class="rst">Reset</button>
+        <p class="note">(Between 1 and 20)</p>
+        <button class="btag">Again</button>
+    </section>
     <h1>Guess My Number!</h1>
     <hr class="line">
     <p class="ans">?</p>
-    </hr>
     <br><br>
-    <form>
-        <input type="number" class="numes" min="1" max="20" required><br>
-        <button type="submit" class="chk">Check</button>
-    </form>
-    <section>
-        <h2 class="h2"></h2>
-        <br><br><br>
-        <p class="score"></p>
-        <br>
-        <p class="hscore"></p>
-    </section>
+    <div>
+        <form class="form">
+            <input type="number" class="numes" min="1" max="20" required><br>
+            <button class="chk">Check</button>
+        </form>
+        <section class="stn2">
+            <h2 class="h2">Start guessing...</h2>
+            <br><br><br>
+            <p class="score">💯 Score : 20</p>
+            <br>
+            <p class="hscore">🥇 Highscore : 0</p>
+        </section>
+    </div>
 </body>
 
 </html>

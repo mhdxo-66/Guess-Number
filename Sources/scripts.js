@@ -1,14 +1,22 @@
 "use strict";
-let inpnum;
 let score = 20;
-document.querySelector('.score').innerHTML = "💯 Score: 20";
 let highscore = 0;
-document.querySelector('.hscore').innerHTML = "🥇 Highscore: 0";
-document.querySelector('.h2').innerHTML = "Start guessing...";
 
-const num = Math.floor(Math.random() * 20) + 1;
+const rnm = Math.floor(Math.random() * 20) + 1;
+console.log(rnm)
 
-document.querySelector('.chk').addEventListener('click', function () {
+document.querySelector('.form').addEventListener('submit', function (e) {
+    console.log(rnm)
+    e.preventDefault();
+    let inpnum;
     inpnum = Number(document.querySelector('.numes').value);
+    if (inpnum > rnm) {
+        document.querySelector('.h2').innerHTML = "To High ++++";
+    } else if (inpnum < rnm) {
+        document.querySelector('.h2').innerHTML = "To Low ----";
+    } else if (inpnum === rnm) {
+        document.querySelector('.h2').innerHTML = "🎉 Correct Number!";
+        document.body.style.backgroundColor = "#5EAF46";
+        document.querySelector('.ans').innerHTML = rnm;
+    }
 });
-

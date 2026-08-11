@@ -10,7 +10,6 @@ function rnmc() {
     return rnm = (Math.floor(Math.random() * 20) + 1);
 };
 rnmc();
-console.log(rnm);
 document.querySelector('.form').addEventListener('submit', function (e) {
     console.log(rnm)
     e.preventDefault();
@@ -27,12 +26,12 @@ document.querySelector('.form').addEventListener('submit', function (e) {
         score--;
         document.querySelector('.score').innerHTML = score;
     } else if (inpnum === rnm) {
-        if (score < 20) {
-            score++;
-        }
         document.querySelector('.h2').innerHTML = "🎉 Correct Number!";
         document.body.style.backgroundColor = "green";
         document.querySelector('.ans').innerHTML = rnm;
+        if (score < 20) {
+            score++;
+        }
         document.querySelector('.score').innerHTML = score;
         highscore++;
         document.querySelector('.hscore').innerHTML = highscore;

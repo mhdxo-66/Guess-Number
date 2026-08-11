@@ -21,7 +21,9 @@ document.querySelector('.form').addEventListener('submit', function (e) {
         document.querySelector('.score').innerHTML = score;
         score--;
     } else if (inpnum === rnm) {
-        score++;
+        if (score < 20) {
+            score++;
+        }
         document.querySelector('.h2').innerHTML = "🎉 Correct Number!";
         document.body.style.backgroundColor = "#5EAF46";
         document.querySelector('.ans').innerHTML = rnm;

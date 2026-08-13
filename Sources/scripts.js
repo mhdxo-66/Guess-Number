@@ -1,6 +1,6 @@
 "use strict";
-let score = 20;
-let highscore = 0;
+let score = Number(localStorage.getItem('score'));
+let highscore = Number(localStorage.getItem('highscore'));
 
 document.querySelector('.rst').addEventListener('click', function () {
     localStorage.clear();
@@ -14,7 +14,7 @@ document.querySelector('.btag').addEventListener('click', function () {
     location.reload();
 });
 document.querySelector('.form').addEventListener('submit', function (e) {
-    console.log(rnm)
+    console.log(rnm);
     e.preventDefault();
     let inpnum;
     inpnum = Number(document.querySelector('.numes').value);
@@ -22,12 +22,15 @@ document.querySelector('.form').addEventListener('submit', function (e) {
         document.querySelector('.h2').innerHTML = "To High ++++";
         document.body.style.backgroundColor = "red";
         score--;
-        document.querySelector('.score').innerHTML = score;
+        localStorage.setItem('score', score);
+        console.log(localStorage.getItem('score'))
+        document.querySelector('.score').innerHTML = `💯 Score : ${score}`;
     } else if (inpnum < rnm) {
         document.querySelector('.h2').innerHTML = "To Low ----";
         document.body.style.backgroundColor = "blue";
         score--;
-        document.querySelector('.score').innerHTML = score;
+        localStorage.setItem('score', score);
+        document.querySelector('.score').innerHTML = `💯 Score : ${score}`;
     } else if (inpnum === rnm) {
         document.querySelector('.h2').innerHTML = "🎉 Correct Number!";
         document.body.style.backgroundColor = "green";
@@ -35,9 +38,9 @@ document.querySelector('.form').addEventListener('submit', function (e) {
         if (score < 20) {
             score++;
         }
-        document.querySelector('.score').innerHTML = score;
+        document.querySelector('.score').innerHTML = `💯 Score : ${score}`;
         highscore++;
-        document.querySelector('.hscore').innerHTML = highscore;
+        document.querySelector('.hscore').innerHTML = `🥇 Highscore : ${highscore}`;
         rnmc();
     }
 });

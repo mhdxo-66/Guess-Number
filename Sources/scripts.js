@@ -10,6 +10,9 @@ function rnmc() {
     return rnm = (Math.floor(Math.random() * 20) + 1);
 };
 rnmc();
+document.querySelector('.btag').addEventListener('click', function () {
+    location.reload();
+});
 document.querySelector('.form').addEventListener('submit', function (e) {
     console.log(rnm)
     e.preventDefault();

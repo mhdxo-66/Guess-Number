@@ -4,6 +4,7 @@ let highscore = Number(localStorage.getItem('highscore'));
 
 document.querySelector('.rst').addEventListener('click', function () {
     localStorage.clear();
+    location.reload();
 })
 let rnm;
 function rnmc() {

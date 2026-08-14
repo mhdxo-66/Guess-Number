@@ -1,6 +1,6 @@
 "use strict";
-let score = Number(localStorage.getItem('score'));
-let highscore = Number(localStorage.getItem('highscore'));
+let score = Number(localStorage.getItem('score')) || 20;
+let highscore = Number(localStorage.getItem('highscore')) || 0;
 
 document.querySelector('.rst').addEventListener('click', function () {
     localStorage.clear();

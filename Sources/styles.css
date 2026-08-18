@@ -11,6 +11,10 @@ body {
     color: #EEEEEE;
 }
 
+.stn1 {
+    display: flex;
+}
+
 button {
     cursor: pointer;
 }
@@ -72,12 +76,7 @@ hr {
     margin: 18%;
 }
 
-.stn1 {
-    display: flex;
-    width: 650px;
-    padding: 0 0px;
-    margin: 0% auto;
-}
+
 
 div {
     display: flex;

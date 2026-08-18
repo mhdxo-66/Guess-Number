@@ -20,28 +20,29 @@ document.querySelector('.form').addEventListener('submit', function (e) {
     let inpnum;
     inpnum = Number(document.querySelector('.numes').value);
     if (inpnum > rnm) {
-        document.querySelector('.h2').innerHTML = "To High ++++";
+        document.querySelector('.h2').textContent = "To High ++++";
         document.body.style.backgroundColor = "red";
         score--;
         localStorage.setItem('score', score);
         console.log(localStorage.getItem('score'))
-        document.querySelector('.score').innerHTML = `💯 Score : ${score}`;
+        document.querySelector('.score').textContent = `💯 Score : ${score}`;
     } else if (inpnum < rnm) {
-        document.querySelector('.h2').innerHTML = "To Low ----";
+        document.querySelector('.h2').textContent = "To Low ----";
         document.body.style.backgroundColor = "blue";
         score--;
         localStorage.setItem('score', score);
-        document.querySelector('.score').innerHTML = `💯 Score : ${score}`;
+        document.querySelector('.score').textContent = `💯 Score : ${score}`;
     } else if (inpnum === rnm) {
-        document.querySelector('.h2').innerHTML = "🎉 Correct Number!";
+        document.querySelector('.h2').textContent = "🎉 Correct Number!";
         document.body.style.backgroundColor = "green";
-        document.querySelector('.ans').innerHTML = rnm;
+        document.querySelector('.ans').textContent = rnm;
         if (score < 20) {
             score++;
         }
-        document.querySelector('.score').innerHTML = `💯 Score : ${score}`;
+        document.querySelector('.score').textContent = `💯 Score : ${score}`;
         highscore++;
-        document.querySelector('.hscore').innerHTML = `🥇 Highscore : ${highscore}`;
+        document.querySelector('.hscore').textContent = `🥇 Highscore : ${highscore}`;
         rnmc();
     }
 });
+

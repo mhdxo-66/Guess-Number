@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
 
 * {
-    font-family: 'Press Start 2P', cursive;
     border-radius: 20px
 }
 
 body {
+    font-family: 'Press Start 2P', cursive;
     margin: 20px;
     background-color: #222222;
     color: #EEEEEE;
@@ -13,22 +13,22 @@ body {
 
 button {
     cursor: pointer;
+    border: 1px;
 }
 
 h1 {
     text-align: center;
     font-size: 40px;
-    margin-top: 35px;
-
+    margin-bottom: 100px
 }
 
 hr {
-    margin-top: 99px;
     background-color: #EEEEEE;
     height: 5px;
 }
 
 .ans {
+    display: block;
     margin: -4% auto;
     font-size: 60px;
     width: 120px;
@@ -55,8 +55,6 @@ hr {
     padding: 15px 20px;
     margin: 18%;
 }
-
-
 
 div {
     display: flex;

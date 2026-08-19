@@ -18,7 +18,7 @@ document.querySelector('.form').addEventListener('submit', function (e) {
     let inpnum;
     inpnum = Number(document.querySelector('.numes').value);
     if (inpnum > rnm) {
-        document.querySelector('.h2').textContent = "To High ++++";
+        document.querySelector('.status').textContent = "To High ++++";
         document.body.style.backgroundColor = "red";
         if (score > 0) {
             score--;
@@ -30,7 +30,7 @@ document.querySelector('.form').addEventListener('submit', function (e) {
         console.log(localStorage.getItem('score'))
         document.querySelector('.score').textContent = `💯 Score : ${score}`;
     } else if (inpnum < rnm) {
-        document.querySelector('.h2').textContent = "To Low ----";
+        document.querySelector('.status').textContent = "To Low ----";
         document.body.style.backgroundColor = "blue";
         if (score > 0) {
             score--;
@@ -41,7 +41,7 @@ document.querySelector('.form').addEventListener('submit', function (e) {
         localStorage.setItem('score', score);
         document.querySelector('.score').textContent = `💯 Score : ${score}`;
     } else if (inpnum === rnm) {
-        document.querySelector('.h2').textContent = "🎉 Correct Number!";
+        document.querySelector('.status').textContent = "🎉 Correct Number!";
         document.body.style.backgroundColor = "green";
         document.querySelector('.ans').textContent = rnm;
         if (score < 20) {

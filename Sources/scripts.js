@@ -2,18 +2,16 @@
 let score = Number(localStorage.getItem('score')) || 20;
 let highscore = Number(localStorage.getItem('highscore')) || 0;
 
-document.querySelector('.rst').addEventListener('click', function () {
+function rst() {
     localStorage.clear();
     location.reload();
-})
+}
 let rnm;
 function rnmc() {
-    return rnm = (Math.floor(Math.random() * 20) + 1);
+    return rnm = (Math.trunc(Math.random() * 20) + 1);
 };
 rnmc();
-document.querySelector('.btag').addEventListener('click', function () {
-    location.reload();
-});
+
 document.querySelector('.form').addEventListener('submit', function (e) {
     console.log(rnm);
     e.preventDefault();
@@ -22,14 +20,24 @@ document.querySelector('.form').addEventListener('submit', function (e) {
     if (inpnum > rnm) {
         document.querySelector('.h2').textContent = "To High ++++";
         document.body.style.backgroundColor = "red";
-        score--;
+        if (score > 0) {
+            score--;
+        } else if (score === 0) {
+            alert('Game Over👾');
+            rst();
+        }
         localStorage.setItem('score', score);
         console.log(localStorage.getItem('score'))
         document.querySelector('.score').textContent = `💯 Score : ${score}`;
     } else if (inpnum < rnm) {
         document.querySelector('.h2').textContent = "To Low ----";
         document.body.style.backgroundColor = "blue";
-        score--;
+        if (score > 0) {
+            score--;
+        } else if (score === 0) {
+            alert('Game Over👾');
+            rst();
+        }
         localStorage.setItem('score', score);
         document.querySelector('.score').textContent = `💯 Score : ${score}`;
     } else if (inpnum === rnm) {

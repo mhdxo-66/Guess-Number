@@ -13,7 +13,9 @@ function rnmc() {
 rnmc();
 
 document.querySelector('.form').addEventListener('submit', function (e) {
+
     console.log(rnm);
+
     e.preventDefault();
     let inpnum;
     inpnum = Number(document.querySelector('.numes').value);
@@ -27,8 +29,8 @@ document.querySelector('.form').addEventListener('submit', function (e) {
             rst();
         }
         localStorage.setItem('score', score);
-        console.log(localStorage.getItem('score'))
-        document.querySelector('.score').textContent = `💯 Score : ${score}`;
+        lvst();
+
     } else if (inpnum < rnm) {
         document.querySelector('.status').textContent = "To Low ----";
         document.body.style.backgroundColor = "blue";
@@ -39,7 +41,8 @@ document.querySelector('.form').addEventListener('submit', function (e) {
             rst();
         }
         localStorage.setItem('score', score);
-        document.querySelector('.score').textContent = `💯 Score : ${score}`;
+        lvst();
+
     } else if (inpnum === rnm) {
         document.querySelector('.status').textContent = "🎉 Correct Number!";
         document.body.style.backgroundColor = "green";
@@ -47,10 +50,15 @@ document.querySelector('.form').addEventListener('submit', function (e) {
         if (score < 20) {
             score++;
         }
-        document.querySelector('.score').textContent = `💯 Score : ${score}`;
         highscore++;
-        document.querySelector('.hscore').textContent = `🥇 Highscore : ${highscore}`;
+        localStorage.setItem('highscore', highscore);
         rnmc();
     }
+    localStorage.setItem('score', score);
+    lvst();
 });
-
+function lvst() {
+    document.querySelector('.score').textContent = `💯 Score : ${score}`;
+    document.querySelector('.hscore').textContent = `🥇 Highscore : ${highscore}`;
+}
+lvst();

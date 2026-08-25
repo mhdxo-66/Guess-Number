@@ -31,7 +31,7 @@ document.querySelector('.form').addEventListener('submit', function (e) {
     let inpnum;
     inpnum = Number(document.querySelector('.numes').value);
     if (inpnum === rnm) {
-        stat('🎉 Correct Number!', rnm, 'green');
+        stat('🎉 Correct Number !', rnm, 'green');
         if (score < 20) {
             score++;
         }

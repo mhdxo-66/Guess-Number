@@ -2,8 +2,6 @@
 
 * {
     -webkit-transition: all 0.3s;
-    margin: 0;
-    padding: 0;
     font-family: 'Press Start 2P', cursive;
     border-radius: 20px
 }
@@ -16,7 +14,7 @@ body {
 
 button {
     width: 90px;
-    margin: 30px 65px;
+    margin: 30px 60px;
     cursor: pointer;
     border: 1px;
     padding: 15px 25px;
@@ -69,6 +67,6 @@ h2 {
 
 section {
     width: 200px;
-    margin: 100px 260px;
+    margin: 50px 260px;
     display: inline-block;
 }

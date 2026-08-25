@@ -52,5 +52,5 @@ hr {
 }
 
 section {
-    display: flex;
+    display: block;
 }

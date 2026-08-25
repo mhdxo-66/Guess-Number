@@ -12,6 +12,17 @@ function rnmc() {
 };
 rnmc();
 
+function lvst() {
+    document.querySelector('.score').textContent = `💯 Score : ${score}`;
+    document.querySelector('.hscore').textContent = `🥇 Highscore : ${highscore}`;
+}
+lvst();
+
+let stat = function (status, ans, color) {
+    document.querySelector('.status').textContent = status;
+    document.querySelector('.ans').textContent = ans;
+    document.body.style.backgroundColor = color;
+}
 document.querySelector('.form').addEventListener('submit', function (e) {
 
     console.log(rnm);
@@ -20,9 +31,7 @@ document.querySelector('.form').addEventListener('submit', function (e) {
     let inpnum;
     inpnum = Number(document.querySelector('.numes').value);
     if (inpnum === rnm) {
-        document.querySelector('.status').textContent = "🎉 Correct Number!";
-        document.body.style.backgroundColor = "green";
-        document.querySelector('.ans').textContent = rnm;
+        stat('🎉 Correct Number!', rnm, 'green');
         if (score < 20) {
             score++;
         }
@@ -32,8 +41,9 @@ document.querySelector('.form').addEventListener('submit', function (e) {
         localStorage.setItem('score', score);
         lvst();
     } else if (inpnum < rnm || inpnum > rnm) {
-        document.querySelector('.status').textContent = inpnum < rnm ? 'To Low ----' : 'To High ++++'
-        document.body.style.backgroundColor = inpnum < rnm ? 'blue' : 'red';
+        stat(inpnum < rnm ? 'To Low ----' : 'To High ++++',
+            inpnum < rnm ? '⬇' : '⬆',
+            inpnum < rnm ? 'blue' : 'red');
         if (score >= 0) {
             score--;
             if (score === 0) {
@@ -45,10 +55,3 @@ document.querySelector('.form').addEventListener('submit', function (e) {
         localStorage.setItem('score', score);
     }
 });
-
-// 
-function lvst() {
-    document.querySelector('.score').textContent = `💯 Score : ${score}`;
-    document.querySelector('.hscore').textContent = `🥇 Highscore : ${highscore}`;
-}
-lvst();

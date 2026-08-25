@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
 
 * {
+    font-family: 'Press Start 2P', cursive;
     border-radius: 20px
 }
 
 body {
-    font-family: 'Press Start 2P', cursive;
     margin: 20px;
     background-color: #222222;
     color: #EEEEEE;
@@ -14,6 +14,7 @@ body {
 button {
     cursor: pointer;
     border: 1px;
+    padding: 15px 25px;
 }
 
 h1 {
@@ -28,20 +29,19 @@ hr {
 }
 
 .ans {
-    display: block;
+    background-color: #EEEEEE;
+    color: #222222;
     margin: -4% auto;
     font-size: 60px;
     width: 120px;
     text-align: center;
     align-items: center;
     padding: 20px 20px;
-    color: #222222;
-    background-color: #EEEEEE;
 }
 
 .numes {
-    font-size: 40px;
     color: #EEEEEE;
+    font-size: 40px;
     padding: 15px 25px;
     background-color: #222222;
     border: 4px #EEEEEE dotted;
@@ -51,23 +51,6 @@ hr {
     border: 4px #EEEEEE solid;
 }
 
-.chk {
-    padding: 15px 20px;
-    margin: 18%;
-}
-
-div {
+section {
     display: flex;
-    width: 500px;
-    margin: 0 auto;
-    padding: 80px;
-}
-
-form {
-    margin-top: 40px;
-    margin-left: -230px;
-}
-
-.stn2 {
-    margin-left: 500px;
 }

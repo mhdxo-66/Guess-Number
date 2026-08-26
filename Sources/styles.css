@@ -1,8 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
-
 * {
     -webkit-transition: all 0.3s;
-    font-family: 'Press Start 2P', cursive;
+    font-family: cursive;
     border-radius: 20px
 }
 
@@ -13,23 +11,20 @@ body {
 }
 
 button {
-    width: 90px;
     margin: 30px 60px;
     cursor: pointer;
-    border: 1px;
+    border: none;
     padding: 15px 25px;
 }
 
 button:hover {
-    background-color: azure;
     box-shadow: 0px 0px 3px 3px azure;
-    padding: 16px 26px;
 }
 
 h1 {
     text-align: center;
     font-size: 40px;
-    margin-bottom: 100px
+    margin-bottom: 140px
 }
 
 hr {
@@ -40,7 +35,7 @@ hr {
 .ans {
     background-color: #EEEEEE;
     color: #222222;
-    margin: -4% auto;
+    margin: -5% auto;
     font-size: 60px;
     width: 150px;
     text-align: center;
@@ -54,11 +49,13 @@ hr {
     padding: 15px 25px;
     background-color: #222222;
     border: 4px #EEEEEE dotted;
+
 }
 
 .numes:focus {
-    border: 4px #EEEEEE dashed;
-    margin: auto;
+    border: 4px dashed;
+    outline: none;
+    box-shadow: none;
 }
 
 h2 {
@@ -67,6 +64,6 @@ h2 {
 
 section {
     width: 200px;
-    margin: 50px 260px;
+    margin: 80px 260px;
     display: inline-block;
 }

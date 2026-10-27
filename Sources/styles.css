@@ -58,8 +58,6 @@ h2 {
 
 #stat {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     text-align: center;
-    margin-top: 50px;
-    gap: 500px;
 }

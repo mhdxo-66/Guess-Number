@@ -1,5 +1,5 @@
 * {
-    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
     font-family: cursive;
     border-radius: 20px
 }
@@ -26,21 +26,15 @@ h1 {
     font-size: 40px;
     margin-bottom: 140px
 }
-
-hr {
-    background-color: #EEEEEE;
-    height: 5px;
-}
-
-.ans {
-    background-color: #EEEEEE;
-    color: #222222;
-    margin: -5% auto;
-    font-size: 60px;
-    width: 150px;
+#rule {
+    font-size: 100px;
     text-align: center;
-    align-items: center;
-    padding: 20px 20px;
+}
+.ans {
+font-size: 100px;
+background-color: #EEEEEE;
+color: #222222;
+padding: 10px 40px;
 }
 
 .numes {
@@ -62,8 +56,10 @@ h2 {
     width: 300px;
 }
 
-section {
-    width: 200px;
-    margin: 80px 260px;
-    display: inline-block;
+#stat {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+    gap: 500px;
 }
